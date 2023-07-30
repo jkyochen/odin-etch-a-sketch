@@ -1,7 +1,9 @@
+const delay = 250;
 
 let container = document.getElementById("container");
 let gridBtn = document.querySelector(".grid-btn");
 let gridAmount = 16;
+let timeout;
 
 initGrids();
 
@@ -17,6 +19,11 @@ gridBtn.addEventListener("click", (e) => {
     }
     gridAmount = newGridAmount;
     initGrids();
+});
+
+window.addEventListener('resize', () => {
+    clearTimeout(timeout);
+    timeout = setTimeout(initGrids, delay);
 });
 
 function initGrids() {
