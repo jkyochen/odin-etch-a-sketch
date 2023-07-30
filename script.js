@@ -21,6 +21,12 @@ gridBtn.addEventListener("click", (e) => {
     initGrids();
 });
 
+container.addEventListener("mouseover", (e) => {
+    if (e.target.className === "grid") {
+        e.target.style.backgroundColor = bgChange();
+    }
+});
+
 window.addEventListener('resize', () => {
     clearTimeout(timeout);
     timeout = setTimeout(initGrids, delay);
@@ -36,4 +42,13 @@ function initGrids() {
         grid.style.height = `${gridWidth}px`;
         container.appendChild(grid);
     }
+}
+
+function random(number) {
+    return Math.floor(Math.random() * number);
+}
+
+function bgChange() {
+    const rndCol = `rgb(${random(255)}, ${random(255)}, ${random(255)})`;
+    return rndCol;
 }

@@ -25,7 +25,3 @@ body {
     border: 1px solid;
     font-size: xx-small;
 }
-
-.grid:hover {
-    background-color: lightpink;
-}
