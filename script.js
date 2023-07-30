@@ -37,7 +37,7 @@ function initGrids() {
     for (let i = 0; i < gridAmount * gridAmount; i++) {
         let grid = document.createElement("div");
         grid.classList.add("grid");
-        let gridWidth = (container.clientWidth - gridAmount * 2) / gridAmount;
+        let gridWidth = container.clientWidth / gridAmount;
         grid.style.width = `${gridWidth}px`;
         grid.style.height = `${gridWidth}px`;
         container.appendChild(grid);
