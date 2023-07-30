@@ -11,20 +11,19 @@ body {
     align-items: center;
 }
 
-.container {
+#container {
+    width: 100vh;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-content: center;
     flex-wrap: wrap;
-    width: 700px;
-    height: 700px;
     gap: 2px;
 }
 
 .grid {
-    width: 40px;
-    height: 40px;
-    border: solid;
+    border: 1px solid;
+    font-size: xx-small;
 }
 
 .grid:hover {
